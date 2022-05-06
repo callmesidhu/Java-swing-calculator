@@ -14,8 +14,8 @@ public class JavaCalculator implements ActionListener {
 	JLabel DisplayLabel;	
 	JButton ButtonAddition, ButtonSubtraction, ButtonMultiplication, ButtonDivision, ButtonEquals, ButtonPoint, ButtonClear;
 	JButton ButtonZero, ButtonOne, ButtonTwo, ButtonThree, ButtonFour, ButtonFive, ButtonSix, ButtonSeven, ButtonEight, ButtonNine;
-	
-	
+	boolean IsOperatorClicked=false;
+	String nOldValue
 	public JavaCalculator() {
 		Frame=new JFrame("JavaCalcualator by Sidharth");
 		Frame.setLayout(null);
@@ -133,59 +133,119 @@ public class JavaCalculator implements ActionListener {
 	public void actionPerformed(ActionEvent ScreenAction) {
 		
 	if(ScreenAction.getSource()==ButtonSeven) {
-		DisplayLabel.setText(DisplayLabel.getText()+"7");
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("7");
+			IsOperatorClicked=false;
+		}
+		else {
+			DisplayLabel.setText(DisplayLabel.getText()+"7");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonEight) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("8");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"8");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonNine) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("9");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"9");
-	}
+		}
+	}	
 	else if(ScreenAction.getSource()==ButtonFour) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("4");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"4");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonFive) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("5");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"5");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonSix) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("6");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"6");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonOne) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("1");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"1");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonTwo) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("2");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"2");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonThree) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("3");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"3");
+		}
 	}
 	else if(ScreenAction.getSource()==ButtonZero) {
+		if(IsOperatorClicked==true) {
+			DisplayLabel.setText("0");
+			IsOperatorClicked=false;
+		}
+		else {
 		DisplayLabel.setText(DisplayLabel.getText()+"0");
+		}
+	}
+	else if(ScreenAction.getSource()==ButtonPoint) {
+		DisplayLabel.setText(DisplayLabel.getText()+".");
 	}
 	else if(ScreenAction.getSource()==ButtonAddition) {
-		
+		IsOperatorClicked=true;
 		
 	}
 	else if(ScreenAction.getSource()==ButtonSubtraction) {
+		IsOperatorClicked=true;
 		
 		
 	}
 	else if(ScreenAction.getSource()==ButtonMultiplication) {
-		
+		IsOperatorClicked=true;
 		
 	}
 	else if(ScreenAction.getSource()==ButtonDivision) {
-		
+		IsOperatorClicked=true;
 		
 	}
 	else if(ScreenAction.getSource()==ButtonEquals) {
 		
 		
 	}
-	else if(ScreenAction.getSource()==ButtonPoint) {
-		DisplayLabel.setText(DisplayLabel.getText()+".");
-	}
-	
 	else {
 		DisplayLabel.setText("");
 	}
