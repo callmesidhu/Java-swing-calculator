@@ -15,7 +15,8 @@ public class JavaCalculator implements ActionListener {
 	JButton ButtonAddition, ButtonSubtraction, ButtonMultiplication, ButtonDivision, ButtonEquals, ButtonPoint, ButtonClear;
 	JButton ButtonZero, ButtonOne, ButtonTwo, ButtonThree, ButtonFour, ButtonFive, ButtonSix, ButtonSeven, ButtonEight, ButtonNine;
 	boolean IsOperatorClicked=false;
-	String nOldValue
+	String OldValue;
+	int OperationNumber=0;
 	public JavaCalculator() {
 		Frame=new JFrame("JavaCalcualator by Sidharth");
 		Frame.setLayout(null);
@@ -227,31 +228,50 @@ public class JavaCalculator implements ActionListener {
 	}
 	else if(ScreenAction.getSource()==ButtonAddition) {
 		IsOperatorClicked=true;
-		
+		OldValue=DisplayLabel.getText();
+		OperationNumber=1;
 	}
 	else if(ScreenAction.getSource()==ButtonSubtraction) {
 		IsOperatorClicked=true;
-		
+		OldValue=DisplayLabel.getText();
+		OperationNumber=2;
 		
 	}
 	else if(ScreenAction.getSource()==ButtonMultiplication) {
 		IsOperatorClicked=true;
-		
+		OldValue=DisplayLabel.getText();
+		OperationNumber=3;
 	}
 	else if(ScreenAction.getSource()==ButtonDivision) {
 		IsOperatorClicked=true;
-		
+		OldValue=DisplayLabel.getText();
+		OperationNumber=4;
 	}
 	else if(ScreenAction.getSource()==ButtonEquals) {
-		
-		
+		String NewValue=DisplayLabel.getText();
+		float OldValueFloat=Float.parseFloat(OldValue);
+		float NewValueFloat=Float.parseFloat(NewValue);
+		 if(OperationNumber==1) {
+			 float Result=OldValueFloat+NewValueFloat;
+			 DisplayLabel.setText(Result+"");
+		 }
+		 else if(OperationNumber==2) {
+			 float Result=OldValueFloat-NewValueFloat;
+			 DisplayLabel.setText(Result+"");
+		 }
+		 else if(OperationNumber==3) {
+			 float Result=OldValueFloat*NewValueFloat;
+			 DisplayLabel.setText(Result+"");
+		 }
+		 else if(OperationNumber==4) {
+			 float Result=OldValueFloat/NewValueFloat;
+			 DisplayLabel.setText(Result+"");
+		 }
 	}
 	else {
 		DisplayLabel.setText("");
 	}
 	
-		
-		
 	}
 
 }
