@@ -12,7 +12,7 @@ public class JavaCalculator implements ActionListener {
 		
 	JFrame Frame;	
 	JLabel DisplayLabel;	
-	JButton ButtonAddition, ButtonSubtraction, ButtonMultiplication, ButtonDivision, ButtonEquals, ButtonPoint;
+	JButton ButtonAddition, ButtonSubtraction, ButtonMultiplication, ButtonDivision, ButtonEquals, ButtonPoint, ButtonClear;
 	JButton ButtonZero, ButtonOne, ButtonTwo, ButtonThree, ButtonFour, ButtonFive, ButtonSix, ButtonSeven, ButtonEight, ButtonNine;
 	
 	
@@ -50,9 +50,14 @@ public class JavaCalculator implements ActionListener {
 		Frame.add(ButtonNine);
 		
 		ButtonAddition=new JButton("+");
-		ButtonAddition.setBounds(457,82, 112, 112);
+		ButtonAddition.setBounds(457,203, 112, 90);
 		ButtonAddition.addActionListener(this);
 		Frame.add(ButtonAddition);
+		
+		ButtonClear=new JButton("DEL");
+		ButtonClear.setBounds(457,84, 112, 90);
+		ButtonClear.addActionListener(this);
+		Frame.add(ButtonClear);
 		
 		ButtonFour=new JButton("4");
 		ButtonFour.setBounds(31,224, 112, 112);
@@ -70,7 +75,7 @@ public class JavaCalculator implements ActionListener {
 		Frame.add(ButtonSix);
 		
 		ButtonSubtraction=new JButton("-");
-		ButtonSubtraction.setBounds(457,224, 112, 112);
+		ButtonSubtraction.setBounds(457,320, 112, 90);
 		ButtonSubtraction.addActionListener(this);
 		Frame.add(ButtonSubtraction);
 		
@@ -90,7 +95,7 @@ public class JavaCalculator implements ActionListener {
 		Frame.add(ButtonThree);
 		
 		ButtonEquals=new JButton("=");
-		ButtonEquals.setBounds(457,508, 112, 112);
+		ButtonEquals.setBounds(457,550, 112, 70);
 		ButtonEquals.addActionListener(this);
 		Frame.add(ButtonEquals);
 		
@@ -111,7 +116,7 @@ public class JavaCalculator implements ActionListener {
 		
 		
 		ButtonPoint=new JButton(".");
-		ButtonPoint.setBounds(457,366, 112, 112);
+		ButtonPoint.setBounds(457,435, 112, 90);
 		ButtonPoint.addActionListener(this);
 		Frame.add(ButtonPoint);
 		
@@ -154,6 +159,9 @@ public class JavaCalculator implements ActionListener {
 	else if(ScreenAction.getSource()==ButtonThree) {
 		DisplayLabel.setText(DisplayLabel.getText()+"3");
 	}
+	else if(ScreenAction.getSource()==ButtonZero) {
+		DisplayLabel.setText(DisplayLabel.getText()+"0");
+	}
 	else if(ScreenAction.getSource()==ButtonAddition) {
 		
 		
@@ -170,9 +178,18 @@ public class JavaCalculator implements ActionListener {
 		
 		
 	}
-	else {
-		DisplayLabel.setText(".");
+	else if(ScreenAction.getSource()==ButtonEquals) {
+		
+		
 	}
+	else if(ScreenAction.getSource()==ButtonPoint) {
+		DisplayLabel.setText(DisplayLabel.getText()+".");
+	}
+	
+	else {
+		DisplayLabel.setText("");
+	}
+	
 		
 		
 	}
