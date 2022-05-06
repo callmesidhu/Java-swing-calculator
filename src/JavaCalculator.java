@@ -128,31 +128,31 @@ public class JavaCalculator implements ActionListener {
 	public void actionPerformed(ActionEvent ScreenAction) {
 		
 	if(ScreenAction.getSource()==ButtonSeven) {
-		DisplayLabel.setText("7");
+		DisplayLabel.setText(DisplayLabel.getText()+"7");
 	}
 	else if(ScreenAction.getSource()==ButtonEight) {
-		DisplayLabel.setText("8");
+		DisplayLabel.setText(DisplayLabel.getText()+"8");
 	}
 	else if(ScreenAction.getSource()==ButtonNine) {
-		DisplayLabel.setText("9");
+		DisplayLabel.setText(DisplayLabel.getText()+"9");
 	}
 	else if(ScreenAction.getSource()==ButtonFour) {
-		DisplayLabel.setText("4");
+		DisplayLabel.setText(DisplayLabel.getText()+"4");
 	}
 	else if(ScreenAction.getSource()==ButtonFive) {
-		DisplayLabel.setText("5");
+		DisplayLabel.setText(DisplayLabel.getText()+"5");
 	}
 	else if(ScreenAction.getSource()==ButtonSix) {
-		DisplayLabel.setText("6");
+		DisplayLabel.setText(DisplayLabel.getText()+"6");
 	}
 	else if(ScreenAction.getSource()==ButtonOne) {
-		DisplayLabel.setText("1");
+		DisplayLabel.setText(DisplayLabel.getText()+"1");
 	}
 	else if(ScreenAction.getSource()==ButtonTwo) {
-		DisplayLabel.setText("2");
+		DisplayLabel.setText(DisplayLabel.getText()+"2");
 	}
 	else if(ScreenAction.getSource()==ButtonThree) {
-		DisplayLabel.setText("3");
+		DisplayLabel.setText(DisplayLabel.getText()+"3");
 	}
 	else if(ScreenAction.getSource()==ButtonAddition) {
 		
