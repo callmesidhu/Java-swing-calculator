@@ -1,9 +1,23 @@
-import java.awt.Color;
-import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
-public class JavaCalculator {
+
+
+public class JavaCalculator implements ActionListener {
+		
+	JFrame Frame;	
+	JLabel DisplayLabel;	
+	JButton ButtonAddition, ButtonSubtraction, ButtonMultiplication, ButtonDivision, ButtonEquals, ButtonPoint;
+	JButton ButtonZero, ButtonOne, ButtonTwo, ButtonThree, ButtonFour, ButtonFive, ButtonSix, ButtonSeven, ButtonEight, ButtonNine;
+	
+	
 	public JavaCalculator() {
-		JFrame Frame = new JFrame("JavaCalcualator by Sidharth");
+		Frame=new JFrame("JavaCalcualator by Sidharth");
 		Frame.setLayout(null);
 		Frame.setSize(610,680);
 		Frame.setLocation(750,10);
@@ -11,7 +25,7 @@ public class JavaCalculator {
 		Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		
-		JLabel DisplayLabel = new JLabel("12345");
+		DisplayLabel=new JLabel();
 		DisplayLabel.setBounds(31, 22, 538, 30);
 		DisplayLabel.setBackground(Color.gray);
 		DisplayLabel.setOpaque(true);
@@ -20,69 +34,85 @@ public class JavaCalculator {
 		Frame.add(DisplayLabel);
 		
 		
-		JButton ButtonSeven = new JButton("7");
+		ButtonSeven=new JButton("7");
 		ButtonSeven.setBounds(31,82, 112, 112);
+		ButtonSeven.addActionListener(this);
 		Frame.add(ButtonSeven);
 		
-		JButton ButtonEight = new JButton("8");
+		ButtonEight=new JButton("8");
 		ButtonEight.setBounds(173,82, 112, 112);
+		ButtonEight.addActionListener(this);
 		Frame.add(ButtonEight);
 		
-		JButton ButtonNine = new JButton("9");
+		ButtonNine=new JButton("9");
 		ButtonNine.setBounds(315,82, 112, 112);
+		ButtonNine.addActionListener(this);
 		Frame.add(ButtonNine);
 		
-		JButton ButtonAddition = new JButton("+");
+		ButtonAddition=new JButton("+");
 		ButtonAddition.setBounds(457,82, 112, 112);
+		ButtonAddition.addActionListener(this);
 		Frame.add(ButtonAddition);
 		
-		JButton ButtonFour = new JButton("4");
+		ButtonFour=new JButton("4");
 		ButtonFour.setBounds(31,224, 112, 112);
+		ButtonFour.addActionListener(this);
 		Frame.add(ButtonFour);
 		
-		JButton ButtonFive = new JButton("5");
+		ButtonFive=new JButton("5");
 		ButtonFive.setBounds(173,224, 112, 112);
+		ButtonFive.addActionListener(this);
 		Frame.add(ButtonFive);
 		
-		JButton ButtonSix = new JButton("6");
+		ButtonSix=new JButton("6");
 		ButtonSix.setBounds(315,224, 112, 112);
+		ButtonSix.addActionListener(this);
 		Frame.add(ButtonSix);
 		
-		JButton ButtonSubtraction = new JButton("-");
+		ButtonSubtraction=new JButton("-");
 		ButtonSubtraction.setBounds(457,224, 112, 112);
+		ButtonSubtraction.addActionListener(this);
 		Frame.add(ButtonSubtraction);
 		
-		JButton ButtonOne = new JButton("1");
+		ButtonOne=new JButton("1");
 		ButtonOne.setBounds(31,366, 112, 112);
+		ButtonOne.addActionListener(this);
 		Frame.add(ButtonOne);
 		
-		JButton ButtonTwo = new JButton("2");
+		ButtonTwo=new JButton("2");
 		ButtonTwo.setBounds(173,366, 112, 112);
+		ButtonTwo.addActionListener(this);
 		Frame.add(ButtonTwo);
 		
-		JButton ButtonThree = new JButton("3");
+		ButtonThree=new JButton("3");
 		ButtonThree.setBounds(315,366, 112, 112);
+		ButtonThree.addActionListener(this);
 		Frame.add(ButtonThree);
 		
-		JButton ButtonEquals= new JButton("=");
+		ButtonEquals=new JButton("=");
 		ButtonEquals.setBounds(457,508, 112, 112);
+		ButtonEquals.addActionListener(this);
 		Frame.add(ButtonEquals);
 		
-		JButton ButtonZero = new JButton("0");
+		ButtonZero=new JButton("0");
 		ButtonZero.setBounds(31,508, 112, 112);
+		ButtonZero.addActionListener(this);
 		Frame.add(ButtonZero);
 		
-		JButton ButtonMultiplication = new JButton("X");
+		ButtonMultiplication=new JButton("X");
 		ButtonMultiplication.setBounds(173,508, 112, 112);
+		ButtonMultiplication.addActionListener(this);
 		Frame.add(ButtonMultiplication);
 		
-		JButton ButtonDivision = new JButton("÷");
+		ButtonDivision=new JButton("÷");
 		ButtonDivision.setBounds(315,508, 112, 112);
+		ButtonDivision.addActionListener(this);
 		Frame.add(ButtonDivision);
 		
 		
-		JButton ButtonPoint = new JButton(".");
+		ButtonPoint=new JButton(".");
 		ButtonPoint.setBounds(457,366, 112, 112);
+		ButtonPoint.addActionListener(this);
 		Frame.add(ButtonPoint);
 		
 		
@@ -94,4 +124,57 @@ public class JavaCalculator {
 		new JavaCalculator();
 		
 	}
+
+	public void actionPerformed(ActionEvent ScreenAction) {
+		
+	if(ScreenAction.getSource()==ButtonSeven) {
+		DisplayLabel.setText("7");
+	}
+	else if(ScreenAction.getSource()==ButtonEight) {
+		DisplayLabel.setText("8");
+	}
+	else if(ScreenAction.getSource()==ButtonNine) {
+		DisplayLabel.setText("9");
+	}
+	else if(ScreenAction.getSource()==ButtonFour) {
+		DisplayLabel.setText("4");
+	}
+	else if(ScreenAction.getSource()==ButtonFive) {
+		DisplayLabel.setText("5");
+	}
+	else if(ScreenAction.getSource()==ButtonSix) {
+		DisplayLabel.setText("6");
+	}
+	else if(ScreenAction.getSource()==ButtonOne) {
+		DisplayLabel.setText("1");
+	}
+	else if(ScreenAction.getSource()==ButtonTwo) {
+		DisplayLabel.setText("2");
+	}
+	else if(ScreenAction.getSource()==ButtonThree) {
+		DisplayLabel.setText("3");
+	}
+	else if(ScreenAction.getSource()==ButtonAddition) {
+		
+		
+	}
+	else if(ScreenAction.getSource()==ButtonSubtraction) {
+		
+		
+	}
+	else if(ScreenAction.getSource()==ButtonMultiplication) {
+		
+		
+	}
+	else if(ScreenAction.getSource()==ButtonDivision) {
+		
+		
+	}
+	else {
+		DisplayLabel.setText(".");
+	}
+		
+		
+	}
+
 }
