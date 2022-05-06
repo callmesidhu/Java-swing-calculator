@@ -65,7 +65,7 @@ public class JavaCalculator {
 		Frame.add(ButtonThree);
 		
 		JButton ButtonEquals= new JButton("=");
-		ButtonEquals.setBounds(457,366, 112, 254);
+		ButtonEquals.setBounds(457,508, 112, 112);
 		Frame.add(ButtonEquals);
 		
 		JButton ButtonZero = new JButton("0");
@@ -79,6 +79,11 @@ public class JavaCalculator {
 		JButton ButtonDivision = new JButton("÷");
 		ButtonDivision.setBounds(315,508, 112, 112);
 		Frame.add(ButtonDivision);
+		
+		
+		JButton ButtonPoint = new JButton(".");
+		ButtonPoint.setBounds(457,366, 112, 112);
+		Frame.add(ButtonPoint);
 		
 		
 		
