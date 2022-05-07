@@ -8,6 +8,7 @@ import javax.swing.SwingConstants;
 
 
 
+
 public class JavaCalculator implements ActionListener {
 		
 	JFrame Frame;	
@@ -18,6 +19,8 @@ public class JavaCalculator implements ActionListener {
 	String OldValue;
 	int OperationNumber=0;
 	float Result=00;
+	
+	
 	public JavaCalculator() {
 		Frame=new JFrame("JavaCalcualator by Sidharth");
 		Frame.setLayout(null);
@@ -182,7 +185,6 @@ public class JavaCalculator implements ActionListener {
 	public static void main(String args[]) {
 		
 		new JavaCalculator();
-		
 	}
 
 	public void actionPerformed(ActionEvent ScreenAction) {
