@@ -161,7 +161,7 @@ public class JavaCalculator implements ActionListener {
 		ButtonMultiplication.setForeground(Color.green);
 		Frame.add(ButtonMultiplication);
 		
-		ButtonDivision=new JButton("÷");
+		ButtonDivision=new JButton("/");
 		ButtonDivision.setBounds(315,508, 112, 112);
 		ButtonDivision.addActionListener(this);
 		ButtonDivision.setFont(new Font("Serif", Font.BOLD, 70));
